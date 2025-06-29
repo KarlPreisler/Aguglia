@@ -11,16 +11,45 @@
 
   <!-- Navbar -->
   <nav class="fixed w-full bg-white/90 backdrop-blur shadow-md z-50">
-    <div class="max-w-7xl mx-auto px-4 py-5 flex justify-between items-center">
-      <h1 class="text-4xl font-bold font-['Cormorant_Garamond'] text-black">Aguglia Persa</h1>
-      <div class="space-x-8 hidden md:flex">
-        <a href="#about" class="text-lg text-[#264653] hover:text-[#e76f51] font-semibold transition">About</a>
-        <a href="#rooms" class="text-lg text-[#264653] hover:text-[#e76f51] font-semibold transition">Rooms</a>
-        <a href="#find-us" class="text-lg text-[#264653] hover:text-[#e76f51] font-semibold transition">Location</a>
-        <a href="#contact" class="text-lg text-[#264653] hover:text-[#e76f51] font-semibold transition">Contact</a>
-      </div>
+  <div class="max-w-7xl mx-auto px-4 py-5 flex justify-between items-center">
+    <h1 class="text-4xl font-bold font-['Cormorant_Garamond'] text-black">Aguglia Persa</h1>
+
+    <!-- Hamburgerknapp som syns på mobil -->
+    <button id="menu-btn" class="md:hidden focus:outline-none">
+      <svg class="w-8 h-8 text-[#264653]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+
+    <!-- Menyn, flex på md och större, hidden på mobil initialt -->
+    <div id="menu" class="hidden md:flex space-x-8">
+      <a href="#about" class="text-lg text-[#264653] hover:text-[#e76f51] font-semibold transition">About</a>
+      <a href="#rooms" class="text-lg text-[#264653] hover:text-[#e76f51] font-semibold transition">Rooms</a>
+      <a href="#find-us" class="text-lg text-[#264653] hover:text-[#e76f51] font-semibold transition">Location</a>
+      <a href="#contact" class="text-lg text-[#264653] hover:text-[#e76f51] font-semibold transition">Contact</a>
     </div>
-  </nav>
+  </div>
+
+  <!-- Mobilmeny, flex och vertikal när syns, hidden när gömd -->
+  <div id="mobile-menu" class="md:hidden hidden flex-col bg-white/90 backdrop-blur shadow-md px-6 py-4 space-y-4">
+    <a href="#about" class="block text-lg text-[#264653] hover:text-[#e76f51] font-semibold transition">About</a>
+    <a href="#rooms" class="block text-lg text-[#264653] hover:text-[#e76f51] font-semibold transition">Rooms</a>
+    <a href="#find-us" class="block text-lg text-[#264653] hover:text-[#e76f51] font-semibold transition">Location</a>
+    <a href="#contact" class="block text-lg text-[#264653] hover:text-[#e76f51] font-semibold transition">Contact</a>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
 
   <!-- Hero Section -->
   <header class="relative h-screen bg-cover bg-center flex items-center justify-center" 
@@ -40,15 +69,15 @@
         Situated between the small village of Testa Dell’Acqua and the charming hilltop town Palazzolo Acreide. </p><br>
       <p class="text-lg text-black leading-relaxed">We are perfectly placed to help you relax in nature whilst being close to everything you need.</p>
     </div>
-    <div class="max-w-4xl mx-auto text-center">
-        <header class="relative h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('https://res.cloudinary.com/dlorcehfq/image/upload/v1744639694/nedladdning_38_h4scw3.png'); background-size: 100% auto; background-repeat: no-repeat;">
-    </div>  
+    <!-- <div class="max-w-4xl mx-auto text-center">
+      <header class="relative h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('https://res.cloudinary.com/dlorcehfq/image/upload/v1744639694/nedladdning_38_h4scw3.png'); background-size: 100% auto; background-repeat: no-repeat;">
+    </div> -->  
   </section>
 
   <!-- Rooms Section -->
   <section id="rooms" class="py-12 px-6 bg-[#fffaf3]">
     <div class="max-w-7xl mx-auto text-center">
-      <h2 class="text-4xl font-['Cormorant_Garamond'] font-bold mb-10 text-[#264653]">Våra rum</h2>
+      <h2 class="text-4xl font-['Cormorant_Garamond'] font-bold mb-10 text-[#264653]">Our Rooms</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
         <!-- Room 1 -->
         <div class="bg-white shadow-lg rounded-2xl overflow-hidden transition hover:scale-105 duration-300">
@@ -73,9 +102,9 @@
   <!-- Directions Section -->
   <section id="find-us" class="py-20 px-6 bg-white">
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-4xl font-['Cormorant_Garamond'] font-bold mb-6 text-black">Hitta oss</h2>
+      <h2 class="text-4xl font-['Cormorant_Garamond'] font-bold mb-6 text-black">How To Find Us</h2>
       <p class="mb-6 text-black text-lg">
-        Vår Bed & Breakfast ligger lugnt och avskilt bland Siciliens kullar – perfekt för en avkopplande semester. Använd kartan nedan för att hitta oss:
+        Aguglia Persa is located in the heart of the Sicilian countryside — a peaceful setting just a short drive from Noto and Palazzolo Acreide. Use the map below to plan your visit:
       </p>
       <div class="mb-6">
         <iframe
@@ -92,7 +121,7 @@
       <a href="https://www.google.com/maps?q=37.0107655,14.9377873" 
          target="_blank" rel="noopener noreferrer"
          class="inline-block bg-[#f4a261] hover:bg-[#e76f51] text-white font-semibold py-3 px-6 rounded-lg shadow-md transition">
-        Öppna i Google Maps
+        Open in Google Maps
       </a>
     </div>
   </section>
@@ -100,19 +129,19 @@
   <!-- Contact Section -->
   <section id="contact" class="py-20 px-6 bg-[#fffaf3]">
     <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-4xl font-['Cormorant_Garamond'] font-bold mb-8 text-black">Kontakt</h2>
-      <p class="text-lg md:text-xl mb-8 text-[#6d6875] leading-relaxed">
+      <h2 class="text-4xl font-['Cormorant_Garamond'] font-bold mb-8 text-black">Contact Us</h2>
+      <p class="text-lg md:text-xl mb-8 text-black leading-relaxed">
         📍 La Nuova Commerciale 5<br>
         SP24 Testa Dell´Acqua <br><br>
-        📞 +39 333 123 4567<br>
-        📧 info@aguglia.it
+        📞 +39 351 874 8954<br>
+        📧 info@agugliapersa.com
       </p>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-[#fefae0] text-center py-6 text-sm text-[#6d6875]">
-    &copy; 2025 Aguglia Persa B&B. Alla rättigheter förbehållna.
+    &copy; 2025 Aguglia Persa B&B. All rights reserved.
   </footer>
 
 </body>
