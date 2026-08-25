@@ -1,148 +1,784 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aguglia Persa</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aguglia Persa — our farmhouse in the hills above Noto</title>
+<meta name="description" content="A family-run Sicilian farmhouse between Testa dell'Acqua and Palazzolo Acreide, in the hills above Noto. Two guest rooms, a big shared kitchen, three dogs, three cats and a lot of quiet. Book direct on WhatsApp.">
+<meta name="theme-color" content="#241F19">
+<link rel="canonical" href="https://www.agugliapersa.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aguglia Persa — our farmhouse in the hills above Noto">
+<meta property="og:description" content="A family-run Sicilian farmhouse between Testa dell'Acqua and Palazzolo Acreide, in the hills above Noto. Two guest rooms, a big shared kitchen, three dogs, three cats and a lot of quiet. Book direct on WhatsApp.">
+<meta property="og:url" content="https://www.agugliapersa.com/">
+<meta property="og:image" content="https://www.agugliapersa.com/images/farm-from-above.webp">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="preload" href="assets/fonts/familjen-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/bodoni-moda.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BedAndBreakfast",
+  "name": "Aguglia Persa",
+  "url": "https://www.agugliapersa.com/",
+  "email": "info@agugliapersa.com",
+  "telephone": "+39 351 874 8954",
+  "numberOfRooms": 2,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "La Nuova Commerciale 5, SP24",
+    "addressLocality": "Testa dell'Acqua, Noto",
+    "addressRegion": "Sicilia",
+    "postalCode": "96017",
+    "addressCountry": "IT"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 37.0107655,
+    "longitude": 14.9377873
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "157",
+    "bestRating": "5"
+  },
+  "knowsLanguage": [
+    "en",
+    "sv"
+  ],
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Free parking on premises",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Shared kitchen",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Air conditioning",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Free Wi-Fi",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Outdoor shower",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "BBQ area",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Fireplace",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Washing machine",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Cot and highchair",
+      "value": true
+    }
+  ]
+}
+</script>
 </head>
-<body class="bg-[#fffaf3] text-[#264653] font-['Open_Sans']">
+<body>
 
-  <!-- Navbar -->
-  <nav class="fixed w-full bg-white/90 backdrop-blur shadow-md z-50">
-  <div class="max-w-7xl mx-auto px-4 py-5 flex justify-between items-center">
-    <h1 class="text-4xl font-bold font-['Cormorant_Garamond'] text-black">Aguglia Persa</h1>
+<a class="skip" href="#main">Skip to content</a>
 
-    <!-- Hamburgerknapp som syns på mobil -->
-    <button id="menu-btn" class="md:hidden focus:outline-none">
-      <svg class="w-8 h-8 text-[#264653]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-        <line x1="3" y1="6" x2="21" y2="6"/>
-        <line x1="3" y1="12" x2="21" y2="12"/>
-        <line x1="3" y1="18" x2="21" y2="18"/>
-      </svg>
-    </button>
-
-    <!-- Menyn, flex på md och större, hidden på mobil initialt -->
-    <div id="menu" class="hidden md:flex space-x-8">
-      <a href="#about" class="text-lg text-[#264653] hover:text-[#e76f51] font-semibold transition">About</a>
-      <a href="#rooms" class="text-lg text-[#264653] hover:text-[#e76f51] font-semibold transition">Rooms</a>
-      <a href="#find-us" class="text-lg text-[#264653] hover:text-[#e76f51] font-semibold transition">Location</a>
-      <a href="#contact" class="text-lg text-[#264653] hover:text-[#e76f51] font-semibold transition">Contact</a>
+<header class="site-head" id="head">
+  <div class="wrap site-head__in">
+    <a class="mark" href="#top">Aguglia&nbsp;Persa</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#welcome">Welcome</a>
+      <a href="#kitchen">The kitchen</a>
+      <a href="#rooms">The rooms</a>
+      <a href="#outside">Outside</a>
+      <a href="#animals">Our animals</a>
+      <a href="#around">Around here</a>
+      <a href="#know">Good to know</a>
+    </nav>
+    <div style="display:flex;gap:0.7rem;align-items:center">
+      <a class="btn btn--sm head-cta" href="#book">Stay with us</a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="drawer" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
+</header>
 
-  <!-- Mobilmeny, flex och vertikal när syns, hidden när gömd -->
-  <div id="mobile-menu" class="md:hidden hidden flex-col bg-white/90 backdrop-blur shadow-md px-6 py-4 space-y-4">
-    <a href="#about" class="block text-lg text-[#264653] hover:text-[#e76f51] font-semibold transition">About</a>
-    <a href="#rooms" class="block text-lg text-[#264653] hover:text-[#e76f51] font-semibold transition">Rooms</a>
-    <a href="#find-us" class="block text-lg text-[#264653] hover:text-[#e76f51] font-semibold transition">Location</a>
-    <a href="#contact" class="block text-lg text-[#264653] hover:text-[#e76f51] font-semibold transition">Contact</a>
-  </div>
+<nav class="drawer" id="drawer" aria-label="Mobile">
+  <a href="#welcome">Welcome</a>
+  <a href="#kitchen">The kitchen</a>
+  <a href="#rooms">The rooms</a>
+  <a href="#outside">Outside</a>
+  <a href="#animals">Our animals</a>
+  <a href="#around">Around here</a>
+  <a href="#know">Good to know</a>
+  <a href="#book">Stay with us</a>
 </nav>
 
-<script>
-  const btn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
+<main id="main">
 
-  btn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-</script>
-
-
-  <!-- Hero Section -->
-  <header class="relative h-screen bg-cover bg-center flex items-center justify-center" 
-          style="background-image: url('https://res.cloudinary.com/dlorcehfq/image/upload/v1744641456/b1712fb7-3dd6-49b3-bd9d-826675cb0af3_mgkibj.avif');">
-    <div class="absolute inset-0 bg-[#fffaf3]/20"></div>
-    <div class="relative z-10 text-center px-6">
-      <h1 class="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-black font-bold mb-4">Welcome to Aguglia Persa</h1>
-      <p class="text-xl md:text-2xl text-black">An authentic Sicilian retreat surrounded by nature, history, and quiet elegance</p>
+<!-- ============================================================= HERO -- -->
+<section class="hero" id="top">
+  <div class="hero__media">
+    <img width="1440" height="1440" src="images/farm-from-above.webp" alt="The farmhouse seen from above, its long tiled roof among olive and carob trees in the Sicilian countryside" fetchpriority="high">
+  </div>
+  <div class="wrap hero__in">
+    <p class="label hero__eyebrow rise rise--1"><span>37.0108&deg;&nbsp;N&nbsp;&nbsp;14.9378&deg;&nbsp;E</span><span class="rule"></span><span>Noto&nbsp;&middot;&nbsp;Sicilia</span></p>
+    <h1 class="d-xl rise rise--2">Our farmhouse in the hills above Noto</h1>
+    <p class="lead rise rise--3">Two guest rooms, a big kitchen everyone shares, three dogs, three cats and a great deal of quiet &mdash; on a working plot of walnut and fruit trees between Testa dell&rsquo;Acqua and Palazzolo Acreide. You&rsquo;re very welcome.</p>
+    <div class="hero__meta rise rise--4">
+      <span>&#9733; 5.0 &nbsp;&middot;&nbsp; 150+ reviews</span>
+      <span>Guest favourite &mdash; top 5% of homes</span>
+      <span>Superhost &middot; five years hosting</span>
+      <span>English &amp; svenska</span>
     </div>
-  </header>
+  </div>
+  <div class="scrollcue" aria-hidden="true"></div>
+</section>
 
-  <!-- About Section -->
-  <section id="about" class="py-20 px-6">  
-    <div class="max-w-4xl mx-auto text-center">
-      <p class="text-lg text-black leading-relaxed">
-        The Sicilian farmhouse Aguglia Persa is located at the heart of the Sicilian countryside in the hills above Noto. 
-        Situated between the small village of Testa Dell’Acqua and the charming hilltop town Palazzolo Acreide. </p><br>
-      <p class="text-lg text-black leading-relaxed">We are perfectly placed to help you relax in nature whilst being close to everything you need.</p>
+<!-- =========================================================== WELCOME -- -->
+<section class="band" id="welcome">
+  <div class="wrap mg">
+    <div class="marg rv">
+      <span class="rule"></span>
+      <p class="label">Welcome</p>
+      <p>Between the village of Testa dell&rsquo;Acqua and the hilltop town of Palazzolo Acreide.</p>
     </div>
-    <!-- <div class="max-w-4xl mx-auto text-center">
-      <header class="relative h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('https://res.cloudinary.com/dlorcehfq/image/upload/v1744639694/nedladdning_38_h4scw3.png'); background-size: 100% auto; background-repeat: no-repeat;">
-    </div> -->  
-  </section>
+    <div class="stack">
+      <div class="note rv">
+        <div>
+        <p class="lead">Aguglia Persa sits at the heart of the Sicilian countryside, in the hills above Noto. We&rsquo;re well placed to help you relax in nature while staying close to everything you need.</p>
+        <p style="margin-top:1.4rem">We live here on the farm, with three dogs and three cats who are all very friendly and will certainly come and say hello. There are two guest rooms, and a large, well-stocked kitchen that everyone shares &mdash; perfect for shared meals and stories, and where the good evenings tend to happen.</p>
+        <p>We don&rsquo;t serve meals, but you&rsquo;re welcome to cook, to use the barbecue, and in season to help yourselves from the fruit trees. Every October we harvest our own walnuts and sell them locally.</p>
+        <p class="sig">&mdash; Birgitta</p>
+        </div>
+        <div class="note__ph">
+          <div class="ph ph--tall"><img width="734" height="1100" src="images/walnuts.webp" alt="A bowl of our walnuts and almonds with an old steel nutcracker" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
 
-  <!-- Rooms Section -->
-  <section id="rooms" class="py-12 px-6 bg-[#fffaf3]">
-    <div class="max-w-7xl mx-auto text-center">
-      <h2 class="text-4xl font-['Cormorant_Garamond'] font-bold mb-10 text-[#264653]">Our Rooms</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
-        <!-- Room 1 -->
-        <div class="bg-white shadow-lg rounded-2xl overflow-hidden transition hover:scale-105 duration-300">
-          <img src="https://res.cloudinary.com/dlorcehfq/image/upload/v1744641567/nedladdning_6_vzmhjm.png" alt="Room 1" class="w-full h-56 object-cover" />
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">Rum 1 + Lounge</h3>
-            <p class="text-[#6d6875] text-sm">Bright and spacious room overlooking the garden. Private bathroom, air conditioning, and free Wi-Fi included.</p>
+      <div class="duo">
+        <figure class="rv" data-d="1">
+          <div class="ph ph--land"><img width="960" height="1200" src="images/front-courtyard.webp" alt="The white front of the farmhouse and its courtyard against a deep blue sky" loading="lazy" decoding="async"></div>
+        </figure>
+        <figure class="rv" data-d="2">
+          <div class="ph ph--land"><img width="961" height="1200" src="images/stone-facade.webp" alt="Dappled shade falling across the old stone wall of the house, with herbs growing in a stone trough" loading="lazy" decoding="async"></div>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================== KITCHEN -- -->
+<section class="band" id="kitchen" style="background:var(--paper-2)">
+  <div class="wrap mg">
+    <div class="marg rv">
+      <span class="rule"></span>
+      <p class="label">The kitchen</p>
+      <p>Shared by everyone staying, along with the laundry and the pantry.</p>
+    </div>
+    <div class="stack">
+      <div class="rv intro">
+        <h2 class="d-l">Our kitchen is your kitchen</h2>
+        <p class="lead">It&rsquo;s big, it&rsquo;s properly stocked, and it&rsquo;s for everyone. We don&rsquo;t serve meals here &mdash; with a kitchen like this we&rsquo;ve never really felt the need to.</p>
+      </div>
+
+      <figure class="rv">
+        <div class="ph ph--wide"><img width="1440" height="960" src="images/kitchen-long.webp" alt="The long shared kitchen: white beamed ceiling, polished concrete floor, wooden cabinets and open shelves" loading="lazy" decoding="async"></div>
+        <figcaption>The kitchen runs the length of the house and opens at both ends.</figcaption>
+      </figure>
+
+      <div class="rv">
+        <p>Pots and pans, oil, salt and pepper, plates, bowls, cutlery and wine glasses, a fridge, an oven and a hob, coffee in the morning. A dining table long enough for everybody. There&rsquo;s a laundry room with a washing machine and a drying rack, and a pantry to keep your shopping in.</p>
+      </div>
+
+      <div class="strip">
+        <figure class="rv" data-d="1"><div class="ph ph--tall"><img width="734" height="1100" src="images/kitchen-shelves.webp" alt="Open plaster shelves stacked with pans, bowls and rows of coloured glasses" loading="lazy" decoding="async"></div></figure>
+        <figure class="rv" data-d="2"><div class="ph ph--tall"><img width="734" height="1100" src="images/kitchen-pans.webp" alt="Copper and steel pans stored in a deep plastered niche" loading="lazy" decoding="async"></div></figure>
+        <figure class="rv" data-d="3"><div class="ph ph--tall"><img width="734" height="1100" src="images/kitchen-stove.webp" alt="The corner of the kitchen with its gas hob, oven and tiled splashback" loading="lazy" decoding="async"></div></figure>
+        <figure class="rv" data-d="4"><div class="ph ph--tall"><img width="733" height="1100" src="images/kitchen-table.webp" alt="The long concrete dining table with black chairs under three paper pendant lamps" loading="lazy" decoding="async"></div></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= ROOMS -- -->
+<section class="band" id="rooms">
+  <div class="wrap mg">
+    <div class="marg rv">
+      <span class="rule"></span>
+      <p class="label">The rooms</p>
+      <p>Two guest rooms, each with its own bathroom and its own outdoor space.</p>
+    </div>
+    <div class="stack">
+      <div class="rv intro">
+        <h2 class="d-l">Two rooms, and a lounge</h2>
+        <p class="lead">Both rooms have a king-size bed, air conditioning and heating, and a bathroom of your own with a toilet, shower and bidet. With only two rooms, you&rsquo;ll be sharing the house with at most one other party.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Room 1 --------------------------------------------------------- -->
+  <div class="wrap" style="margin-top:clamp(38px,5vw,72px)">
+    <article class="roomblock rv">
+      <div class="roomblock__ph">
+        <div class="ph ph--port"><img width="1080" height="1440" src="images/room1-wide.webp" alt="Room 1: a bright bedroom with a king-size bed, two armchairs, a pendant lamp and a window onto the fields" loading="lazy" decoding="async"></div>
+      </div>
+      <div class="roomblock__body">
+        <h3 class="d-m">Room 1, with the lounge</h3>
+        <p class="who">Up to 4 guests &middot; king bed + sofa bed &middot; private bathroom</p>
+        <p>A comfy king-size bed, air conditioning and heating, and your own bathroom with a toilet, shower and bidet. Next door is a lounge that&rsquo;s yours alone &mdash; a fireplace for chilly spring and autumn evenings, and a big comfortable sofa that turns easily into a double bed. Four of you can stay here comfortably.</p>
+        <ul class="spec">
+          <li>King-size bed, plus a double sofa bed in the lounge</li>
+          <li>Private bathroom &mdash; toilet, shower, bidet</li>
+          <li>Air conditioning and heating</li>
+          <li>Fireplace in the lounge</li>
+          <li>Your own outdoor dining space and outdoor shower</li>
+          <li>Views over the garden and the hills</li>
+        </ul>
+        <div class="roomcta">
+          <a class="btn" href="room-1.html">See this room</a>
+          <a class="btn btn--line" href="https://wa.me/393518748954?text=Hello%20Aguglia%20Persa!%20I%27d%20like%20to%20ask%20about%20Room%201%20with%20the%20lounge." target="_blank" rel="noopener">Ask us</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="strip" style="margin-top:clamp(14px,2vw,22px)">
+      <figure class="rv" data-d="1"><div class="ph ph--sq"><img width="900" height="1200" src="images/room1-bed.webp" alt="The bed in Room 1, made up with folded towels laid out for arriving guests" loading="lazy" decoding="async"></div></figure>
+      <figure class="rv" data-d="2"><div class="ph ph--sq"><img width="900" height="1200" src="images/room1-armchairs.webp" alt="Two armchairs and a small table beside the window in Room 1, looking out over green fields" loading="lazy" decoding="async"></div></figure>
+      <figure class="rv" data-d="3"><div class="ph ph--sq"><img width="900" height="1200" src="images/lounge-wide.webp" alt="The private lounge: a deep blue sofa, a round woven rug and a pendant lamp under the beamed ceiling" loading="lazy" decoding="async"></div></figure>
+      <figure class="rv" data-d="4"><div class="ph ph--sq"><img width="900" height="1200" src="images/room1-bathroom.webp" alt="The bathroom for Room 1, with a basin, mirror, toilet and bidet" loading="lazy" decoding="async"></div></figure>
+    </div>
+  </div>
+
+  <!-- Room 2 --------------------------------------------------------- -->
+  <div class="wrap" style="margin-top:clamp(46px,6vw,90px)">
+    <article class="roomblock roomblock--flip rv">
+      <div class="roomblock__ph">
+        <div class="ph ph--port"><img width="1080" height="1440" src="images/room2-wide.webp" alt="Room 2: a king-size bed, a blue painted cabinet, a leather sofa and tall windows onto the trees" loading="lazy" decoding="async"></div>
+      </div>
+      <div class="roomblock__body">
+        <h3 class="d-m">Room 2</h3>
+        <p class="who">2 guests &middot; king bed &middot; private bathroom</p>
+        <p>The same comfy king-size bed, air conditioning and heating, and your own bathroom with a toilet, shower and bidet. Like Room 1, it has its own outdoor dining space and its own outdoor shower, and windows that open straight onto the trees.</p>
+        <ul class="spec">
+          <li>King-size bed</li>
+          <li>Private bathroom &mdash; toilet, shower, bidet</li>
+          <li>Air conditioning and heating</li>
+          <li>Your own outdoor dining space and outdoor shower</li>
+          <li>Views over the garden and the hills</li>
+        </ul>
+        <div class="roomcta">
+          <a class="btn" href="room-2.html">See this room</a>
+          <a class="btn btn--line" href="https://wa.me/393518748954?text=Hello%20Aguglia%20Persa!%20I%27d%20like%20to%20ask%20about%20Room%202." target="_blank" rel="noopener">Ask us</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="strip" style="margin-top:clamp(14px,2vw,22px)">
+      <figure class="rv" data-d="1"><div class="ph ph--sq"><img width="900" height="1200" src="images/room2-bed-sofa.webp" alt="Room 2 made up for arrival, with towels folded on the bed" loading="lazy" decoding="async"></div></figure>
+      <figure class="rv" data-d="2"><div class="ph ph--sq"><img width="900" height="1200" src="images/room2-cabinet.webp" alt="The tall blue-painted cabinet beside the bed in Room 2, with the green curtain at the window" loading="lazy" decoding="async"></div></figure>
+      <figure class="rv" data-d="3"><div class="ph ph--sq"><img width="734" height="1100" src="images/room2-pampas.webp" alt="Morning light coming through the window of Room 2" loading="lazy" decoding="async"></div></figure>
+      <figure class="rv" data-d="4"><div class="ph ph--sq"><img width="900" height="1200" src="images/room2-bathroom.webp" alt="The bathroom for Room 2, with a gilt mirror, basin, toilet and bidet" loading="lazy" decoding="async"></div></figure>
+    </div>
+  </div>
+
+  <!-- Whole house ---------------------------------------------------- -->
+  <div class="wrap" style="margin-top:clamp(46px,6vw,90px)">
+    <article class="roomblock rv">
+      <div class="roomblock__ph">
+        <div class="ph ph--land"><img width="1440" height="960" src="images/front-wide.webp" alt="The whole farmhouse and its outbuildings seen from the hillside, surrounded by fields and trees" loading="lazy" decoding="async"></div>
+      </div>
+      <div class="roomblock__body">
+        <h3 class="d-m">Both rooms together</h3>
+        <p class="who">4 + 2 guests &middot; the whole house</p>
+        <p>Take Room 1, the lounge and Room 2 as one booking and the farmhouse is yours &mdash; the kitchen, the courtyards, the barbecue and the grounds, with nobody to share them with. Good for two families travelling together, or one large one.</p>
+        <div class="roomcta">
+          <a class="btn" href="whole-house.html">See this room</a>
+          <a class="btn btn--line" href="https://wa.me/393518748954?text=Hello%20Aguglia%20Persa!%20I%27d%20like%20to%20ask%20about%20the%20whole%20house." target="_blank" rel="noopener">Ask us</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- =========================================================== OUTSIDE -- -->
+<section class="band" id="outside" style="background:var(--paper-2)">
+  <div class="wrap mg">
+    <div class="marg rv">
+      <span class="rule"></span>
+      <p class="label">Outside</p>
+      <p>Each room has its own dining space and its own outdoor shower. The rest is shared.</p>
+    </div>
+    <div class="stack">
+      <div class="rv intro">
+        <h2 class="d-l">Where most evenings end up</h2>
+        <p class="lead">Under the pergola there&rsquo;s a long table and lights strung through the canvas. There&rsquo;s a barbecue for laid-back cookouts, sun loungers, and plenty of space to dine and unwind in the fresh air.</p>
+      </div>
+
+      <div class="duo">
+        <figure class="rv" data-d="1">
+          <div class="ph ph--port"><img width="800" height="1200" src="images/pergola-table.webp" alt="A long wooden table under the pergola, festoon lights strung through the draped canvas above" loading="lazy" decoding="async"></div>
+          <figcaption>The pergola, where dinner usually happens.</figcaption>
+        </figure>
+        <figure class="rv" data-d="2">
+          <div class="ph ph--port"><img width="619" height="1100" src="images/bbq-smoke.webp" alt="Smoke rising from the stone barbecue, green trees behind it" loading="lazy" decoding="async"></div>
+          <figcaption>The barbecue &mdash; coal or wood, and it gets used most summer evenings.</figcaption>
+        </figure>
+      </div>
+
+      <div class="strip">
+        <figure class="rv" data-d="1"><div class="ph ph--sq"><img width="619" height="1100" src="images/outdoor-shower.webp" alt="An outdoor shower open to the garden, connected to one of the rooms" loading="lazy" decoding="async"></div><figcaption>Outdoor shower.</figcaption></figure>
+        <figure class="rv" data-d="2"><div class="ph ph--sq"><img width="619" height="1100" src="images/deck-chair.webp" alt="A striped deckchair on the wooden platform among the trees" loading="lazy" decoding="async"></div><figcaption>The yoga platform.</figcaption></figure>
+        <figure class="rv" data-d="3"><div class="ph ph--sq"><img width="734" height="1100" src="images/blue-table.webp" alt="Lunch laid out on the blue outdoor table with blue folding chairs" loading="lazy" decoding="async"></div><figcaption>Lunch outside.</figcaption></figure>
+        <figure class="rv" data-d="4"><div class="ph ph--sq"><img width="1200" height="800" src="images/terrace-shaded.webp" alt="The shaded terrace beside the house with a long table and chairs under the trees" loading="lazy" decoding="async"></div><figcaption>The shaded terrace.</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================== ANIMALS -- -->
+<section class="band" id="animals">
+  <div class="wrap mg">
+    <div class="marg rv">
+      <span class="rule"></span>
+      <p class="label">Our animals</p>
+      <p>They live here all year round.</p>
+    </div>
+    <div class="stack">
+      <div class="rv intro">
+        <h2 class="d-l">Three dogs, three cats</h2>
+        <p class="lead">They&rsquo;re all very friendly, they&rsquo;ll come and find you, and they add a good deal of joy to the place. One small favour: please don&rsquo;t leave food unattended.</p>
+      </div>
+      <div class="duo">
+        <figure class="rv" data-d="1">
+          <div class="ph ph--land"><img width="900" height="1200" src="images/dog-deck.webp" alt="One of the farm dogs stretched out on the wooden deck in the afternoon sun" loading="lazy" decoding="async"></div>
+        </figure>
+        <figure class="rv" data-d="2">
+          <div class="ph ph--land"><img width="619" height="1100" src="images/cat-basin.webp" alt="One of the cats curled up asleep on top of a carved stone basin" loading="lazy" decoding="async"></div>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================== EVENING -- -->
+<section class="band night" id="evening">
+  <div class="night__glow" aria-hidden="true"></div>
+  <div class="wrap mg">
+    <div class="marg rv">
+      <span class="rule"></span>
+      <p class="label">Evenings</p>
+      <p>No streetlights for several kilometres in any direction.</p>
+    </div>
+    <div class="stack">
+      <div class="rv intro">
+        <h2 class="d-l">When the sun goes down</h2>
+        <p class="lead">There&rsquo;s nothing between us and the hills, so the evenings are quiet and the sky is very dark. Dinner tends to run long. From October we light the fireplace in the lounge.</p>
+      </div>
+
+      <figure class="rv">
+        <div class="ph ph--pano"><img width="1420" height="642" src="images/farmhouse-night.webp" alt="The farmhouse at night, its white walls washed by warm lamplight, chairs set out on the courtyard" loading="lazy" decoding="async"></div>
+      </figure>
+
+      <div class="trio">
+        <figure class="rv" data-d="1"><div class="ph ph--land"><img width="1440" height="889" src="images/courtyard-night.webp" alt="The narrow courtyard at blue hour, one lamp throwing light up the white wall" loading="lazy" decoding="async"></div></figure>
+        <figure class="rv" data-d="2"><div class="ph ph--land"><img width="1440" height="960" src="images/interior-dusk.webp" alt="Inside at dusk, the long room lit by lamps with the dining table at the far end" loading="lazy" decoding="async"></div></figure>
+        <figure class="rv" data-d="3"><div class="ph ph--land"><img width="701" height="953" src="images/cactus-moon.webp" alt="A tall cactus silhouetted against the moon above the old stone outbuildings" loading="lazy" decoding="async"></div></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================== LAND -- -->
+<section class="band" id="land">
+  <div class="wrap mg">
+    <div class="marg rv">
+      <span class="rule"></span>
+      <p class="label">The farm</p>
+      <p>October &mdash; walnut harvest. Fruit trees are yours to pick from when they&rsquo;re in season.</p>
+    </div>
+    <div class="stack">
+      <div class="rv intro">
+        <h2 class="d-l">A working plot, not a garden</h2>
+        <p class="lead">Fruit trees you&rsquo;re welcome to help yourselves from, hay cut in the fields beyond the wall, and every October our own walnut harvest, which we sell locally.</p>
+      </div>
+      <div class="strip">
+        <figure class="rv" data-d="1"><div class="ph ph--sq"><img width="1052" height="701" src="images/hay-bales-countryside.webp" alt="Round hay bales in the cut field beyond the wall" loading="lazy" decoding="async"></div></figure>
+        <figure class="rv" data-d="2"><div class="ph ph--sq"><img width="825" height="1100" src="images/stone-head.webp" alt="A carved stone head standing among the old stones, warm in the evening light" loading="lazy" decoding="async"></div></figure>
+        <figure class="rv" data-d="3"><div class="ph ph--sq"><img width="789" height="1052" src="images/flowering-cactus-arch.webp" alt="A flowering cactus climbing the old stone wall beside an arched door" loading="lazy" decoding="async"></div></figure>
+        <figure class="rv" data-d="4"><div class="ph ph--sq"><img width="733" height="1100" src="images/room1-lock.webp" alt="The heavy iron lock on one of the old wooden doors" loading="lazy" decoding="async"></div></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================== GALLERY -- -->
+<section class="band band--tight" id="gallery" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="mg" style="margin-bottom:clamp(22px,3.4vw,40px)">
+      <div class="marg rv"><span class="rule"></span><p class="label">Photographs</p></div>
+      <h2 class="d-m rv">The house, the land, and the light on it</h2>
+    </div>
+    <div class="gal" id="gal"></div>
+  </div>
+</section>
+
+<!-- ========================================================== REVIEWS -- -->
+<section class="band" id="reviews">
+  <div class="wrap mg">
+    <div class="marg rv">
+      <span class="rule"></span>
+      <p class="label">Our guests</p>
+      <p>Every figure here is a live rating from guests who have actually stayed.</p>
+    </div>
+    <div class="stack">
+      <div class="rv intro">
+        <div class="score">
+          <span class="score__n">5.0</span>
+          <span class="score__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <p class="lead">More than 150 stays reviewed across our rooms, and an unbroken five stars on the room we&rsquo;ve hosted longest. A Guest Favourite &mdash; among the top 5% of homes.</p>
+      </div>
+
+      <div class="rev-grid">
+        <div class="rv">
+          <div class="bars">
+            <div class="bar"><span>Accuracy</span><span class="bar__t"><span class="bar__f" data-v="100"></span></span><span>5.0</span></div>
+            <div class="bar"><span>Check-in</span><span class="bar__t"><span class="bar__f" data-v="100"></span></span><span>5.0</span></div>
+            <div class="bar"><span>Communication</span><span class="bar__t"><span class="bar__f" data-v="100"></span></span><span>5.0</span></div>
+            <div class="bar"><span>Value</span><span class="bar__t"><span class="bar__f" data-v="100"></span></span><span>5.0</span></div>
+            <div class="bar"><span>Cleanliness</span><span class="bar__t"><span class="bar__f" data-v="98"></span></span><span>4.9</span></div>
+            <div class="bar"><span>Location</span><span class="bar__t"><span class="bar__f" data-v="98"></span></span><span>4.9</span></div>
+          </div>
+
+          <p class="label" style="margin-top:2.1rem">What guests mention most</p>
+          <div class="chips">
+            <span class="chip">Hospitality <b>73</b></span>
+            <span class="chip">Location <b>42</b></span>
+            <span class="chip">Decor <b>20</b></span>
+            <span class="chip">Indoor spaces <b>20</b></span>
+            <span class="chip">Comfort <b>16</b></span>
+            <span class="chip">The kitchen <b>11</b></span>
+            <span class="chip">Getting around <b>9</b></span>
+            <span class="chip">Outdoor spaces <b>8</b></span>
+            <span class="chip">Family <b>7</b></span>
+            <span class="chip">The beach <b>4</b></span>
           </div>
         </div>
-        <!-- Room 2 -->
-        <div class="bg-white shadow-lg rounded-2xl overflow-hidden transition hover:scale-105 duration-300">
-          <img src="https://res.cloudinary.com/dlorcehfq/image/upload/v1744641589/nedladdning_aowmhf.png" alt="Room 2" class="w-full h-56 object-cover" />
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">Rum 2</h3>
-            <p class="text-[#6d6875] text-sm">A charming room with rustic details and modern comfort. Ideal for couples seeking a romantic getaway.</p>
+
+        <div class="host rv" data-d="1">
+          <h3 class="d-m">Birgitta</h3>
+          <p style="font-size:0.94rem">Superhost. Hosts in English and Swedish, answers within the hour, and lives on the farm.</p>
+          <dl>
+            <dt>Hosting since</dt><dd>Five years</dd>
+            <dt>Reviews</dt><dd>157</dd>
+            <dt>Average rating</dt><dd>4.99</dd>
+            <dt>Response rate</dt><dd>100%</dd>
+            <dt>Response time</dt><dd>Within an hour</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================= BOOK -- -->
+<section class="band book" id="book">
+  <div class="wrap mg">
+    <div class="marg rv">
+      <span class="rule"></span>
+      <p class="label">Stay with us</p>
+      <p>Booking with us directly is the simplest way &mdash; for you and for us.</p>
+    </div>
+    <div class="stack">
+      <div class="rv intro">
+        <h2 class="d-l">Come and stay</h2>
+        <p class="lead">Send us a message with the dates you have in mind and how many of you there are, and we&rsquo;ll come straight back to you &mdash; usually within the hour.</p>
+      </div>
+
+      <div class="book__ways rv">
+        <div class="way">
+          <h3>WhatsApp</h3>
+          <p>The quickest way to reach us. Tell us your dates and we&rsquo;ll let you know what&rsquo;s free.</p>
+          <a class="btn btn--wa" href="https://wa.me/393518748954?text=Hello%20Aguglia%20Persa!%20I%27d%20like%20to%20ask%20about%20staying%20with%20you." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35M12.04 21.5h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.38 9.38 0 0 1-1.44-5.01c0-5.18 4.22-9.4 9.42-9.4a9.35 9.35 0 0 1 6.65 2.76 9.32 9.32 0 0 1 2.76 6.65c0 5.18-4.23 9.41-9.42 9.41M20.4 3.58A11.36 11.36 0 0 0 12.04.13C5.8.13.73 5.2.73 11.43c0 2 .52 3.94 1.51 5.66L.63 23l6.05-1.59a11.36 11.36 0 0 0 5.36 1.37h.01c6.24 0 11.31-5.07 11.31-11.3 0-3.02-1.17-5.86-3.31-8"/></svg>
+            Message us on WhatsApp
+          </a>
+        </div>
+        <div class="way">
+          <h3>Email or phone</h3>
+          <p>If you&rsquo;d rather write properly, or call. We speak English and Swedish.</p>
+          <p style="font-size:0.98rem">
+            <a href="mailto:info@agugliapersa.com" style="color:inherit">info@agugliapersa.com</a><br>
+            <a href="tel:+393518748954" style="color:inherit">+39&nbsp;351&nbsp;874&nbsp;8954</a>
+          </p>
+          <a class="btn btn--line" href="mailto:info@agugliapersa.com?subject=Staying%20at%20Aguglia%20Persa">Write to us</a>
+        </div>
+      </div>
+
+      <hr class="hr">
+
+      <div class="rv">
+        <p class="label">Why book with us</p>
+        <p style="margin-top:0.8rem">No platform fee, no booking system between us &mdash; just a message, an answer from whoever is at the farm, and a better rate than you&rsquo;ll find anywhere else. Ask us anything before you commit: the road, the dogs, whether the fig tree is ready.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================== AROUND -- -->
+<section class="band" id="around">
+  <div class="wrap mg">
+    <div class="marg rv">
+      <span class="rule"></span>
+      <p class="label">Around here</p>
+      <p>A car is essential &mdash; there&rsquo;s no bus up here, and that&rsquo;s part of the charm.</p>
+    </div>
+    <div class="stack">
+      <div class="rv intro">
+        <h2 class="d-l">Baroque towns, gorges, and the sea in half an hour</h2>
+        <p class="lead">We&rsquo;re deep in the countryside but not far from anything. One note before you set off: if your car is low, take our entrance track slowly &mdash; it&rsquo;s 150 metres and it&rsquo;s bumpy.</p>
+      </div>
+      <ul class="dist rv">
+        <li>
+          <span class="place">Testa dell&rsquo;Acqua</span><span class="time">5 min</span>
+          <p class="what">Our nearest village &mdash; bar, bakery, the everyday shopping.</p>
+        </li>
+        <li>
+          <span class="place">Palazzolo Acreide</span><span class="time">10 min</span>
+          <p class="what">A UNESCO-listed Baroque hilltop town, with a Greek theatre cut into the rock above it.</p>
+        </li>
+        <li>
+          <span class="place">Noto</span><span class="time">25 min</span>
+          <p class="what">The cathedral and the honey-coloured Baroque streets. Noto Antica, the abandoned old town, is closer still.</p>
+        </li>
+        <li>
+          <span class="place">Siracusa &amp; Ortigia</span><span class="time">30 min</span>
+          <p class="what">Greek Sicily, and dinner on an island.</p>
+        </li>
+        <li>
+          <span class="place">The coast</span><span class="time">30&ndash;40 min</span>
+          <p class="what">Beaches, the Vendicari nature reserve, and Marzamemi&rsquo;s old tuna-fishing harbour.</p>
+        </li>
+        <li>
+          <span class="place">Cava Grande &amp; Pantalica</span><span class="time">Nearby</span>
+          <p class="what">Two great limestone gorges &mdash; waterfalls, natural swimming pools and rock-cut tombs. The Bauli caves and the walking paths start almost at our gate.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================== GOOD TO KNOW -- -->
+<section class="band" id="know" style="background:var(--paper-2)">
+  <div class="wrap mg">
+    <div class="marg rv">
+      <span class="rule"></span>
+      <p class="label">Good to know</p>
+      <p>What&rsquo;s here, and a few things worth knowing before you arrive.</p>
+    </div>
+    <div class="stack">
+      <div class="rv intro">
+        <h2 class="d-l">What&rsquo;s here</h2>
+        <p class="lead">Everything is on one floor, there&rsquo;s free parking on the property, and Wi-Fi throughout &mdash; around 42 to 51 Mbps depending on the room.</p>
+      </div>
+
+      <div class="amen rv">
+        <section>
+          <h3>In your room</h3>
+          <ul>
+            <li>King-size bed</li>
+            <li>Air conditioning and heating</li>
+            <li>Private bathroom &mdash; toilet, shower, bidet</li>
+            <li>Lock on the door, private entrance</li>
+            <li>Blackout curtains</li>
+            <li>Hangers and clothes storage</li>
+            <li>Extra pillows and blankets</li>
+            <li>Portable fan</li>
+            <li>Hairdryer, iron</li>
+            <li>Towels, bedding, soap, shampoo, shower gel and conditioner</li>
+          </ul>
+        </section>
+        <section>
+          <h3>The shared kitchen</h3>
+          <ul>
+            <li>Fridge, oven and hob</li>
+            <li>Pots and pans, oil, salt and pepper</li>
+            <li>Plates, bowls, cutlery, mugs, wine glasses</li>
+            <li>Coffee</li>
+            <li>Long dining table</li>
+            <li>Pantry room</li>
+            <li>Cleaning products</li>
+            <li>Laundry room &mdash; washing machine, drying rack</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Outside</h3>
+          <ul>
+            <li>Your own outdoor shower</li>
+            <li>Your own outdoor dining area</li>
+            <li>Barbecue &mdash; coal or wood &mdash; with utensils</li>
+            <li>Pergola with a long table</li>
+            <li>Sun loungers and outdoor furniture</li>
+            <li>Private patio</li>
+            <li>Yoga platform under the trees</li>
+            <li>Fruit trees, yours to pick from in season</li>
+            <li>Free parking on the property</li>
+          </ul>
+        </section>
+        <section>
+          <h3>In the house</h3>
+          <ul>
+            <li>Fireplace &mdash; wood and pellet</li>
+            <li>Everything on one floor, no stairs</li>
+            <li>Private living room (Room 1)</li>
+            <li>Hot water throughout</li>
+            <li>Fire extinguisher</li>
+            <li>Books and reading material</li>
+            <li>Wi-Fi, 42&ndash;51 Mbps</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Coming with children</h3>
+          <ul>
+            <li>Cot</li>
+            <li>Highchair</li>
+            <li>Children&rsquo;s books and toys</li>
+            <li>Backyard (not fully fenced)</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Just ask</h3>
+          <ul>
+            <li>A bathing tub, on request</li>
+            <li>Drop your bags off before check-in or after check-out</li>
+            <li>Cleaning during your stay</li>
+            <li>Stays of 28 days or longer</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="rules rv">
+        <h2 class="d-m">A few things, for everyone&rsquo;s wellbeing</h2>
+        <ol>
+          <li>We don&rsquo;t serve meals, but the kitchen is huge and fully equipped and for everyone to use &mdash; as is the barbecue area.</li>
+          <li>Please don&rsquo;t flush paper or anything else down the toilet. Use the bins provided &mdash; it protects our old plumbing and the land around us.</li>
+          <li>Please don&rsquo;t leave food unattended, because of the lovely dogs and cats who live here.</li>
+          <li>No smoking indoors.</li>
+          <li>Take care of your key &mdash; lost keys mean a replacement fee.</li>
+          <li>We all clean up after ourselves in the shared areas.</li>
+          <li>Quiet from 11pm.</li>
+          <li>Please lock the doors when you leave the house.</li>
+          <li>Most important of all: enjoy yourselves, and feel the peace and harmony here at Aguglia Persa.</li>
+        </ol>
+        <p class="welcome">Welcome!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================== CONTACT -- -->
+<section class="band" id="contact">
+  <div class="wrap">
+    <div class="mg" style="margin-bottom:clamp(22px,3.4vw,40px)">
+      <div class="marg rv"><span class="rule"></span><p class="label">Find us</p></div>
+      <div class="rv"><h2 class="d-l">Between Testa dell&rsquo;Acqua and Palazzolo Acreide</h2></div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="rv">
+        <address class="addr">
+          <p style="font-size:1.05rem;line-height:1.7">
+            Aguglia Persa<br>
+            La Nuova Commerciale 5<br>
+            SP24, Testa dell&rsquo;Acqua<br>
+            96017 Noto (SR), Sicilia
+          </p>
+          <p>
+            <a href="tel:+393518748954">+39&nbsp;351&nbsp;874&nbsp;8954</a><br>
+            <a href="mailto:info@agugliapersa.com">info@agugliapersa.com</a>
+          </p>
+          <p class="label" style="margin-top:1.5rem">37.0107655&deg;&nbsp;N &nbsp; 14.9377873&deg;&nbsp;E</p>
+        </address>
+        <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:1.7rem">
+          <a class="btn" href="https://www.google.com/maps?q=37.0107655,14.9377873" target="_blank" rel="noopener">Open in Maps</a>
+          <a class="btn btn--line" href="#book">Stay with us</a>
+        </div>
+      </div>
+      <div class="rv" data-d="1">
+        <div class="mapbox" data-src="https://www.google.com/maps?q=37.0107655,14.9377873&amp;z=14&amp;output=embed">
+          <div class="mapbox__in">
+            <svg class="mapbox__pin" viewBox="0 0 48 48" aria-hidden="true">
+              <circle cx="24" cy="24" r="5" />
+              <circle cx="24" cy="24" r="14" />
+              <path d="M24 0v9M24 39v9M0 24h9M39 24h9" />
+            </svg>
+            <p class="label">Testa dell&rsquo;Acqua &middot; Noto &middot; Sicilia</p>
+            <p class="mapbox__note">The map comes from Google. We only load it if you ask for it, so nothing about your visit is sent to them while you read.</p>
+            <button class="btn btn--line mapBtn" type="button">Show the map</button>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Directions Section -->
-  <section id="find-us" class="py-20 px-6 bg-white">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-4xl font-['Cormorant_Garamond'] font-bold mb-6 text-black">How To Find Us</h2>
-      <p class="mb-6 text-black text-lg">
-        Aguglia Persa is located in the heart of the Sicilian countryside — a peaceful setting just a short drive from Noto and Palazzolo Acreide. Use the map below to plan your visit:
-      </p>
-      <div class="mb-6">
-        <iframe
-          width="100%"
-          height="450"
-          style="border:0;"
-          loading="lazy"
-          allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade"
-          class="rounded-xl shadow-lg"
-          src="https://www.google.com/maps?q=37.0107655,14.9377873&z=17&output=embed">
-        </iframe>
-      </div>
-      <a href="https://www.google.com/maps?q=37.0107655,14.9377873" 
-         target="_blank" rel="noopener noreferrer"
-         class="inline-block bg-[#f4a261] hover:bg-[#e76f51] text-white font-semibold py-3 px-6 rounded-lg shadow-md transition">
-        Open in Google Maps
-      </a>
-    </div>
-  </section>
+</main>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 px-6 bg-[#fffaf3]">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-4xl font-['Cormorant_Garamond'] font-bold mb-8 text-black">Contact Us</h2>
-      <p class="text-lg md:text-xl mb-8 text-black leading-relaxed">
-        📍 La Nuova Commerciale 5<br>
-        SP24 Testa Dell´Acqua <br><br>
-        📞 +39 351 874 8954<br>
-        📧 info@agugliapersa.com
-      </p>
-    </div>
-  </section>
+<footer class="site-foot">
+  <div class="wrap site-foot__in">
+    <span class="mark">Aguglia&nbsp;Persa</span>
+    <span>&copy; 2026 Aguglia Persa &middot; Testa dell&rsquo;Acqua, Noto (SR)</span>
+    <span>Reg. IT089013C2RLTCHNY3</span>
+    <span><a href="mailto:info@agugliapersa.com">info@agugliapersa.com</a></span>
+  </div>
+</footer>
 
-  <!-- Footer -->
-  <footer class="bg-[#fefae0] text-center py-6 text-sm text-[#6d6875]">
-    &copy; 2025 Aguglia Persa B&B. All rights reserved.
-  </footer>
+<a class="fab" id="fab" href="https://wa.me/393518748954?text=Hello%20Aguglia%20Persa!%20I%27d%20like%20to%20ask%20about%20staying%20with%20you." target="_blank" rel="noopener" aria-label="Message us on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35M12.04 21.5h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.38 9.38 0 0 1-1.44-5.01c0-5.18 4.22-9.4 9.42-9.4a9.35 9.35 0 0 1 6.65 2.76 9.32 9.32 0 0 1 2.76 6.65c0 5.18-4.23 9.41-9.42 9.41M20.4 3.58A11.36 11.36 0 0 0 12.04.13C5.8.13.73 5.2.73 11.43c0 2 .52 3.94 1.51 5.66L.63 23l6.05-1.59a11.36 11.36 0 0 0 5.36 1.37h.01c6.24 0 11.31-5.07 11.31-11.3 0-3.02-1.17-5.86-3.31-8"/></svg>
+  <span>WhatsApp</span>
+</a>
 
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photograph">
+  <img id="lbImg" alt="">
+  <button class="lb__btn lb__close" id="lbClose" aria-label="Close">&#10005;</button>
+  <div class="lb__bar">
+    <span class="lb__cap" id="lbCap"></span>
+    <span class="lb__nav">
+      <span id="lbCount" style="align-self:center;margin-right:0.6rem"></span>
+      <button class="lb__btn" id="lbPrev" aria-label="Previous">&#8592;</button>
+      <button class="lb__btn" id="lbNext" aria-label="Next">&#8594;</button>
+    </span>
+  </div>
+</div>
+
+<script src="assets/main.js"></script>
 </body>
 </html>
